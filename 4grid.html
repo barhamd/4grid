@@ -2,10 +2,10 @@
 <html>
     <head>
         <style type="text/css">
-            #image
+            #image /* Have a div of it's own (rather than body) to ensure the large image is scrollable*/
             {
                 background-image:url('large-grid.jpeg');
-                width:1000px;
+                width:10000px;
                 height:10000px;
             }
             #container p
@@ -20,7 +20,11 @@
             <link type="text/css" rel="stylesheet" href="./jquery-ui-1.8.23.custom/css.ui-lightness/jquery-ui-1.8.23.custom.css" />
             <script src="./jquery-ui-1.8.23.custom/js/jquesry-1.8.0.min.js"></script>
             <script src="./jquery-ui-1.8.23.custom/js/jquery-ui-1.8.23.custom.min.js"></script>
+
     </head>
     <body>
+        <!--Div that holds the background image-->
+        <div id="image">
+        </div>
     </body>
 </html>
