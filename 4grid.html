@@ -23,12 +23,20 @@
 
         <script type="text/javascript">
 
-            /* Enables #container to be resizable. Also links #grid to resize at the same time. */
+        /* Enables #container to be resizable. Also links #grid to resize at the same time. */
         $(function() {
                 $("#container").resizable({
-alsoResize: "#grid"
-});
+                    alsoResize: "#grid"
                 });
+            });
+
+        /* Enables #container to be draggable */
+        $(function() {
+                $("#container").draggable({
+                    handle: "p"
+                });
+            });
+
 </script>
 
     </head>
@@ -42,6 +50,7 @@ alsoResize: "#grid"
             <!--Clickable grid div-->
             <div style="width: 500px; height: 450px; float:left; opacity:0.6; border:5px solid blue;" id="grid">
             </div>
+        </div>
 
             <!--Div that holds the background image-->
             <div id="image">
