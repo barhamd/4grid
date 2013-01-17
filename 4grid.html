@@ -14,6 +14,11 @@
                 background:#6666FF;
                 color:white;
             }
+            #coordinates
+            {
+                float:right;
+            }
+            
         </style>
 
         <!--Linking to jquery and jquery ui files (including css for jquery ui)-->
@@ -22,6 +27,8 @@
         <script src="./jquery-ui-1.8.23.custom/js/jquery-ui-1.8.23.custom.min.js"></script>
 
         <script type="text/javascript">
+
+            jQuery(document).ready(function(){
 
         /* Enables #container to be resizable. Also links #grid to resize at the same time. */
         $(function() {
@@ -37,11 +44,25 @@
                 });
             });
 
+        /* Tracks current x,y coordinates of the mouse */
+        $("#grid").mousemove(function(e) {
+                var x = e.pageX;
+                var y = e.pageY;
+                $("#current").text("Current:" + "(" + x + "," + y + ")");
+                });
+            })
+
 </script>
 
     </head>
 
     <body>
+
+        <!--Div that contains the coordinates from #grid-->
+        <div id="coordinates">
+            <!--Displays current mouse coordinates in #grid-->
+        <p id="current"></p>
+    </div>
 
         <!--Resizable div-->
         <div style="width: 515px; height: 515px; background: rgba(250,250,250,0); float:left;" id="container">
