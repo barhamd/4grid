@@ -46,9 +46,9 @@
 
         /* Tracks current x,y coordinates of the mouse */
         $("#grid").mousemove(function(e) {
-                var x = e.pageX;
-                var y = e.pageY;
-                $("#current").text("Current:" + "(" + x + "," + y + ")");
+                var xpixel = e.pageX; /* The pixel coordinate on the x-axis */
+                var ypixel = e.pageY; /* The pixel coordinate on the y-axis */
+                $("#current").text("Current:" + "(" + xpixel + "," + ypixel + ")");
                 });
             })
 
